@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar Pago - Yordin Recargas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/yordin_logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/yordin_logo.ico" type="image/x-icon">
+    <style>
+        /* Estilos específicos de payment.html */
+        .payment-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .payment-container h2 {
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+        }
+
+        .transaction-info {
+            background-color: var(--input-bg);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .transaction-info p {
+            margin: 8px 0;
+            font-size: 1.1em;
+            color: var(--text-color);
+        }
+        
+        .transaction-info p strong {
+            color: var(--secondary-pink);
+        }
+
+        .payment-info {
+            margin-bottom: 20px;
+        }
+
+        .payment-info h3 {
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .payment-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--input-bg);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .payment-details p {
+            margin: 0;
+            font-size: 1em;
+            color: var(--text-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 8px var(--shadow-light);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1DA851;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-whatsapp:disabled {
+            background-color: #999;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .payment-container {
+                margin: 20px 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo-link"><img src="images/yordin_logo.png" alt="Yordin Logo" class="logo-img"></a>
+        </div>
+    </header>
+
+    <main>
+        <div style="background-color: rgb(153, 101, 17);" class="payment-container">
+            <h2>Detalles de la Transacción</h2>
+            <div style="background-color: rgb(223, 163, 68);" class="transaction-info" id="transaction-info">
+                </div>
+
+            <div style="background-color: rgb(223, 163, 68); border-radius: 10px;" class="payment-info">
+                <h3>Método de Pago: Pago Móvil</h3>
+                <div style="background-color: rgb(223, 163, 68); " class="payment-details">
+                    <p><strong>Teléfono:</strong> 04167736464</p>
+                    <p><strong>Cédula:</strong> 31.619.206</p>
+                    <p><strong>Banco:</strong>(0104) Venezolano de Crédito</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reference-code">Código de Referencia de Pago:</label>
+                <input type="text" style="background-color: white; color: black;" id="reference-code" placeholder="Ej: 123456789" required>
+            </div>
+
+            <a id="whatsapp-link" class="btn-whatsapp" href="#" target="_blank" disabled>
+                <i class="fab fa-whatsapp"></i> Enviar Solicitud
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p style="color:blue;">&copy; 2025 Yordin Recargas. Todos los derechos reservados.</p>
+            <a href="https://wa.me/584264282553" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+            </a>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const transactionDetails = JSON.parse(localStorage.getItem('transactionDetails'));
+        const transactionInfoDiv = document.getElementById('transaction-info');
+        const referenceCodeInput = document.getElementById('reference-code');
+        const whatsappLink = document.getElementById('whatsapp-link');
+
+        // Lógica de redirección: si no hay detalles de la transacción, redirige a index.html
+        if (!transactionDetails) {
+            alert('¡Ups! Parece que llegaste aquí por error. Por favor, selecciona un juego y un paquete primero.');
+            window.location.href = 'index.html';
+            return; // Detiene la ejecución del resto del script
+        }
+
+        // Muestra los detalles de la transacción
+        const isRoblox = transactionDetails.game === 'Roblox';
+        const idLabel = isRoblox ? 'ID/Usuario:' : 'ID de Jugador:';
+
+        transactionInfoDiv.innerHTML = `
+            <p><strong>Juego:</strong> ${transactionDetails.game}</p>
+            <p><strong>${idLabel}</strong> ${isRoblox ? transactionDetails.username : transactionDetails.playerId}</p>
+            <p><strong>Paquete:</strong> ${transactionDetails.package}</p>
+            <p><strong>Monto a Pagar:</strong> ${transactionDetails.currency === 'VES' ? 'Bs.' : 'USD'} ${transactionDetails.finalPrice}</p>
+        `;
+
+        // Habilita/deshabilita el botón de WhatsApp
+        referenceCodeInput.addEventListener('input', () => {
+            const referenceCode = referenceCodeInput.value.trim();
+            whatsappLink.disabled = !referenceCode;
+            if (!whatsappLink.disabled) {
+                const mensaje = crearMensajeWhatsApp(transactionDetails, referenceCode);
+                whatsappLink.href = `https://wa.me/584264282553?text=${encodeURIComponent(mensaje)}`;
+            }
+        });
+
+        // Evento para el botón de WhatsApp: al hacer clic, limpia el localStorage y redirige
+        whatsappLink.addEventListener('click', (event) => {
+            if (whatsappLink.disabled) {
+                event.preventDefault(); // Evita la redirección si el botón está deshabilitado
+                return;
+            }
+
+            // Opcional: una breve pausa para que el usuario vea el mensaje de envío
+            setTimeout(() => {
+                // Limpia los datos de la transacción del localStorage
+                localStorage.removeItem('transactionDetails');
+                // Redirige a la página principal
+                window.location.href = 'index.html';
+            }, 1000); // 1 segundo de retraso
+        });
+
+        function crearMensajeWhatsApp(details, reference) {
+            let mensaje = `🎮 Solicitud de Recarga 🎮\n\n`;
+            mensaje += `Juego: ${details.game}\n`;
+            if (details.game === 'Roblox') {
+                mensaje += `Usuario: ${details.username}\nContraseña: ${details.password}\n`;
+            } else {
+                mensaje += `ID: ${details.playerId}\n`;
+            }
+            mensaje += `Monto: ${details.currency === 'VES' ? 'Bs.' : 'USD'} ${details.finalPrice}\n`;
+            mensaje += `Paquete: ${details.package}\n`;
+            mensaje += `Referencia de pago: ${reference}\n`;
+            mensaje += `\n¡Por Favor Realize la solitud lo antes posible!`;
+            return mensaje;
+        }
+    });
+</script>
+</body>
+</html>

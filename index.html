@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yordin - Recargas</title>
+    <link rel="icon" href="images/yordin_logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/yordin_logo.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preload" href="images/yordin_logo.png" as="image">
+    <link rel="preload" href="images/freefire_logo.jpg" as="image">
+    <link rel="preload" href="images/roblox_logo.jpg" as="image">
+    <link rel="preload" href="images/bloodstrike_logo.jpg" as="image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Puedes definir colores personalizados si los necesitas más específicos
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <a href="index.html" class="logo-link">
+            <img src="images/yordin_logo.png" alt="Yordin Logo" class="logo-img">
+        </a>
+    </div>
+</header>
+
+    <main class="home-main">
+        <section>
+            <h2 style="color: rgb(153, 101, 17); font-weight: 800;">Selecciona tu Juego Favorito</h2>
+            <p class="small-text">Haz clic en tu juego para comenzar la recarga.</p>
+            <div class="game-grid" id="game-grid">
+                <a class="game-card" href="freefire.html">
+                    <img src="images/freefire_logo.jpg" alt="Free Fire">
+                    <h2 style="color: blue;">Free Fire</h2>
+                    <p style="color: white;" class="game-description">Recarga tus diamantes de Free Fire de forma rápida y segura.</p>
+                </a>
+                <a class="game-card" href="roblox.html">
+                    <img src="images/Roblox_logo.jpg" alt="Roblox">
+                    <h2 style="color: blue;">Roblox</h2>
+                    <p style="color: white;" class="game-description">Recarga robux para Roblox y desbloquea contenido exclusivo.</p>
+                </a>
+                <a class="game-card" href="bloodstrike.html">
+                    <img src="images/bloodstrike_logo.jpg" alt="Blood Strike Gold">
+                    <h2 style="color: blue;">Blood Strike</h2>
+                    <p style="color: white;" class="game-description">Recarga Oro y compra Pases para Blood Strike.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p style="color:blue;">&copy; 2025 Yordin Recargas. Todos los derechos reservados.</p>
+            <a href="https://wa.me/584264282553" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

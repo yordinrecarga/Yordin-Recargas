@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recargar Blood Strike - Yordin Recargas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/yordin_logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/yordin_logo.ico" type="image/x-icon">
+<style>
+    /* Estilos Generales */
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        background-color: white; 
+        color: var(--text-color); 
+        line-height: 1.6; 
+        display: flex; 
+        flex-direction: column; 
+        min-height: 100vh; 
+        overflow-x: hidden; 
+    }
+    
+    main { 
+        flex: 1; 
+        margin: 0 auto; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    h1, h2, h3 { 
+        color: grey; 
+        text-align: center; 
+        margin-bottom: 25px; 
+        font-weight: 700; 
+        text-shadow: 1px 1px 3px var(--shadow-dark); 
+    }
+    
+    p { 
+        text-align: center; 
+        margin-bottom: 15px; 
+    }
+
+    /* Header */
+    header { 
+        background-color: #121212; 
+        padding: 10px 25px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        border-bottom: none; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); 
+        flex-wrap: wrap; 
+        position: sticky; 
+        top: 0; 
+        z-index: 1000; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    .header-left .logo-img { 
+        height: auto; 
+        max-height: 85px; 
+        width: auto; 
+        border-radius: 8px; 
+        object-fit: contain; 
+    }
+    
+    .header-right { 
+        display: flex; 
+        align-items: center; 
+        gap: 18px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    
+    .search-bar { 
+        position: relative; 
+        display: flex; 
+        align-items: center; 
+    }
+    
+    .search-bar input { 
+        background-color: var(--input-bg); 
+        border: 1px solid var(--border-color); 
+        border-radius: 20px; 
+        padding: 10px 15px 10px 40px; 
+        color: var(--text-color); 
+        outline: none; 
+        width: 200px; 
+        transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+        box-sizing: border-box; 
+    }
+    
+    .search-bar input:focus { 
+        border-color: var(--primary-purple); 
+        box-shadow: 0 0 8px var(--shadow-light); 
+    }
+    
+    .search-bar .fas.fa-search { 
+        position: absolute; 
+        left: 15px; 
+        color: var(--secondary-text); 
+        font-size: 1em; 
+    }
+
+    /* Selector de Moneda */
+    .custom-currency-selector { 
+        position: relative; 
+        cursor: pointer; 
+        user-select: none; 
+        background-color: var(--input-bg); 
+        border: 1px solid var(--border-color); 
+        border-radius: 20px; 
+        padding: 10px 15px; 
+        display: flex; 
+        align-items: center; 
+        gap: 8px; 
+        transition: all 0.3s ease; 
+        min-width: 120px; 
+        justify-content: space-between; 
+        box-sizing: border-box; 
+    }
+    
+    .custom-currency-selector:hover { 
+        border-color: var(--primary-purple); 
+        box-shadow: 0 0 8px var(--shadow-light); 
+    }
+    
+    .selected-currency { 
+        display: flex; 
+        align-items: center; 
+        gap: 8px; 
+        flex-grow: 1; 
+    }
+    
+    .selected-currency img { 
+        height: 20px; 
+        width: 20px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
+    
+    .selected-currency span { 
+        font-weight: 600; 
+        color: var(--text-color); 
+        white-space: nowrap; 
+    }
+    
+    .selected-currency i { 
+        font-size: 0.8em; 
+        transition: transform 0.3s ease; 
+        color: var(--secondary-text); 
+        margin-left: auto; 
+    }
+    
+    .custom-currency-selector.show .selected-currency i { 
+        transform: rotate(180deg); 
+    }
+    
+    .currency-options { 
+        position: absolute; 
+        top: calc(100% + 8px); 
+        left: 0; 
+        right: 0; 
+        background-color: var(--card-bg); 
+        border: 1px solid var(--border-color); 
+        border-radius: 10px; 
+        box-shadow: 0 4px 12px var(--shadow-dark); 
+        z-index: 10; 
+        display: none; 
+        overflow: hidden; 
+        opacity: 0; 
+        transform: translateY(10px); 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
+    }
+    
+    .custom-currency-selector.show .currency-options { 
+        display: block; 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+    
+    .currency-options .option { 
+        padding: 12px 18px; 
+        display: flex; 
+        align-items: center; 
+        gap: 8px; 
+        transition: background-color 0.2s ease; 
+    }
+    
+    .currency-options .option:hover { 
+        background-color: var(--dark-grey-bg); 
+        color: var(--primary-purple); 
+    }
+    
+    .currency-options .option img { 
+        height: 20px; 
+        width: 20px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
+
+    /* Menús de Usuario */
+    .user-menu-container, .guest-menu-container { 
+        position: relative; 
+    }
+    
+    .user-menu-button, .guest-menu-button { 
+        background: none; 
+        border: none; 
+        color: var(--text-color); 
+        cursor: pointer; 
+        font-size: 1.8em; 
+        transition: color 0.3s ease; 
+    }
+    
+    .user-menu-button:hover, .guest-menu-button:hover { 
+        color: var(--primary-purple); 
+    }
+    
+    .user-menu-dropdown, .guest-menu-dropdown { 
+        position: absolute; 
+        top: calc(100% + 10px); 
+        right: 0; 
+        background-color: var(--card-bg); 
+        border: 1px solid var(--border-color); 
+        border-radius: 8px; 
+        box-shadow: 0 4px 12px var(--shadow-dark); 
+        padding: 10px 0; 
+        min-width: 200px; 
+        z-index: 100; 
+    }
+    
+    .user-menu-item, .guest-menu-item { 
+        display: block; 
+        padding: 10px 15px; 
+        color: var(--text-color); 
+        text-decoration: none; 
+        transition: background-color 0.2s ease, color 0.2s ease; 
+    }
+    
+    .user-menu-item:hover, .guest-menu-item:hover { 
+        background-color: var(--input-bg); 
+        color: var(--primary-purple); 
+    }
+    
+    .hidden { 
+        display: none; 
+    }
+
+    /* Botón de Proceder al Pago (MODIFICADO) */
+    .btn-primary { 
+    background: linear-gradient(to right, #d68f24, #867355); 
+    color: #ffffff; 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-size: 1.1em; 
+    font-weight: 700; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6); 
+    display: block; 
+    margin: 20px auto; 
+    letter-spacing: 0.5px; 
+}
+
+.btn-primary:hover { 
+    background: linear-gradient(to right, #867355, #d68f24); 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8); 
+}
+    
+    .btn-primary:disabled { 
+        background: var(--border-color); 
+        cursor: not-allowed; 
+        transform: none; 
+        box-shadow: none; 
+        opacity: 0.6; 
+    }
+
+    /* Sección Principal del Juego */
+    .game-main { 
+        width: 100%; 
+        margin-top: 0; 
+        padding: 0; 
+    }
+    
+    .game-main .game-hero { 
+        position: relative; 
+        width: 100%; 
+        height: 250px; 
+        overflow: hidden; 
+        margin-bottom: 40px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        background-color: var(--dark-grey-bg); 
+        border-radius: 0; 
+        box-shadow: 0 10px 25px var(--shadow-dark); 
+    }
+    
+    .game-main .game-hero img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        display: block; 
+    }
+    
+    .game-main .game-hero .game-hero-overlay { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.4); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        z-index: 1; 
+    }
+    
+    .game-main .game-hero h1 { 
+        color: var(--white); 
+        font-size: 3em; 
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+        margin: 0; 
+        position: relative; 
+        z-index: 2; 
+    }
+    
+    .game-content-wrapper { 
+        max-width: 900px; 
+        margin: 0 auto 40px auto; 
+        padding: 0 20px; 
+        box-sizing: border-box; 
+    }
+    
+    .game-info-card, .recharge-form { 
+        background: #d68f24; 
+        background: -webkit-linear-gradient(to right, #d68f24, #867355); 
+        background: linear-gradient(to right, #d68f24, #867355); 
+        border-radius: 12px; 
+        padding: 25px; 
+        margin-bottom: 30px; 
+        box-shadow: var(--box-shadow-card); 
+        color: var(--text-color); 
+        border: 2px solid var(--border-color-card); 
+        transition: box-shadow 0.3s ease-in-out; 
+    }
+    
+    .game-info-card:hover, .recharge-form:hover { 
+        box-shadow: var(--box-shadow-card-hover); 
+    }
+    
+    .game-info-card h2, .recharge-form h2 { 
+        color: var(--primary-purple); 
+        margin-top: 0; 
+        margin-bottom: 15px; 
+        font-size: 1.8em; 
+        text-align: center; 
+    }
+    
+    .game-info-card p { 
+        margin-bottom: 10px; 
+        line-height: 1.6; 
+        text-align: center; 
+    }
+    
+    .game-info-card span { 
+        font-weight: bold; 
+        color: var(--secondary-pink); 
+    }
+    
+    #pubgmobile-recharge-form { 
+        background-color: transparent; 
+        border: none; 
+        box-shadow: none; 
+        padding: 0; 
+    }
+    
+    .form-group { 
+        margin-bottom: 25px; 
+    }
+    
+    .form-group label { 
+        display: block; 
+        margin-bottom: 8px; 
+        font-weight: 600; 
+        color: var(--text-color); 
+        font-size: 1em; 
+        text-align: center; 
+    }
+    
+    .form-group input[type="text"] { 
+        width: 100%; 
+        max-width: 350px; 
+        padding: 12px 15px; 
+        border: 1px solid var(--border-color); 
+        border-radius: 8px; 
+        background-color: var(--input-bg); 
+        color: var(--text-color); 
+        font-size: 1em; 
+        outline: none; 
+        transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+        box-sizing: border-box; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    
+    .form-group input[type="text"]:focus { 
+        border-color: var(--primary-purple); 
+        box-shadow: 0 0 8px var(--shadow-light); 
+    }
+    
+    .form-group input::placeholder { 
+        color: var(--secondary-text); 
+    }
+    
+    .package-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+        gap: 15px; 
+    }
+    
+    .package-item {
+    position: relative;
+    background-color: #A8A9AD;
+    border: 2px solid #868B8E;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    min-height: 100px;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-sizing: border-box;
+}
+    
+    .package-item:hover { 
+        border-color: var(--item-border-hover); 
+        transform: translateY(-5px); 
+        box-shadow: var(--item-shadow-hover); 
+    }
+    
+.package-item.selected { 
+    background-color: #A8A9AD;
+    border-color: #A8A9AD;
+    box-shadow: 0 0 10px rgba(168, 169, 173, 0.5), 0 0 20px rgba(168, 169, 173, 0.3);
+    transform: translateY(-3px); 
+}
+    
+    .package-item.selected::after { 
+        content: '\f058'; 
+        font-family: "Font Awesome 6 Free"; 
+        font-weight: 900; 
+        position: absolute; 
+        top: 0.5rem; 
+        right: 0.5rem; 
+        color: #28a745; 
+        background-color: var(--card-bg); 
+        border-radius: 50%; 
+        font-size: 1.5rem; 
+    }
+    
+    .package-item span:first-child { 
+        font-size: 1.05em; 
+        font-weight: 600; 
+        margin-bottom: 5px; 
+    }
+    
+    .package-item .price { 
+        font-weight: 700; 
+        color: var(--secondary-pink); 
+        font-size: 1.25em; 
+    }
+    
+#confirm-recharge-btn { 
+    background: #0000ff !important;
+    color: #ffffff !important;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    display: block;
+    margin: 20px auto;
+    letter-spacing: 0.5px;
+}
+    
+    #confirm-recharge-btn:hover:not(:disabled) { 
+        background: #0000cc !important;
+        transform: translateY(-2px); 
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    }
+    
+    #confirm-recharge-btn:disabled { 
+        background-color: var(--border-color); 
+        cursor: not-allowed; 
+        opacity: 0.7; 
+        transform: none; 
+        box-shadow: none; 
+    }
+
+    /* Footer */
+    footer { 
+        background-color: var(--card-bg); 
+        color: var(--secondary-text); 
+        padding: 20px; 
+        text-align: center; 
+        margin-top: 30px; 
+        border-top: 1px solid var(--border-color); 
+        box-shadow: 0 -2px 8px var(--shadow-dark); 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    .footer-content { 
+        max-width: 1000px; 
+        margin: 0 auto; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px; 
+        padding: 0 20px; 
+        box-sizing: border-box; 
+    }
+    
+    footer p { 
+        margin-bottom: 0; 
+        font-size: 0.9em; 
+    }
+    
+    .footer-links { 
+        display: flex; 
+        gap: 18px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        width: 100%; 
+        max-width: 500px; 
+        margin: 0 auto; 
+    }
+    
+    .footer-links a { 
+        color: var(--secondary-text); 
+        text-decoration: none; 
+        transition: color 0.3s ease; 
+        font-size: 0.9em; 
+    }
+    
+    .footer-links a:hover { 
+        color: var(--primary-purple); 
+    }
+    
+    .whatsapp-link { 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 8px; 
+        background-color: var(--success-green); 
+        color: #ffffff; 
+        padding: 10px 18px; 
+        border-radius: 20px; 
+        text-decoration: none; 
+        font-weight: 600; 
+        margin-top: 15px; 
+        font-size: 1em; 
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
+    }
+    
+    .whatsapp-link:hover { 
+        background-color: #218838; 
+        transform: translateY(-1px); 
+    }
+    
+    .whatsapp-link .fab.fa-whatsapp { 
+        font-size: 1.2em; 
+    }
+    
+    .kingcoins-balance { 
+        display: flex; 
+        align-items: center; 
+        gap: 8px; 
+        color: var(--text-color); 
+        font-weight: 600; 
+        padding: 10px 15px; 
+        background-color: var(--card-bg); 
+        border-radius: 20px; 
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+    }
+    
+    .kingcoins-balance .fa-crown { 
+        color: var(--secondary-pink); 
+    }
+    
+    .recharge-form{
+        margin-top: 5%;
+    }
+
+    /* Media Queries (Diseño Responsivo) */
+    @media (max-width: 768px) { 
+        header { 
+            flex-direction: column; 
+            gap: 15px; 
+            padding: 15px; 
+            justify-content: center; 
+        } 
+        .header-right { 
+            flex-direction: column; 
+            width: 100%; 
+            max-width: 350px; 
+            margin: 0 auto; 
+            gap: 12px; 
+        } 
+        .search-bar, .custom-currency-selector, .user-menu-container, .guest-menu-container, .kingcoins-balance { 
+            width: 100%; 
+            max-width: none; 
+        } 
+        .search-bar input { 
+            width: 100%; 
+            padding: 10px 15px 10px 40px; 
+            box-sizing: border-box; 
+        } 
+        .game-main .game-hero { 
+            height: 200px; 
+            margin-bottom: 30px; 
+        } 
+        .game-main .game-hero h1 { 
+            font-size: 2em; 
+        } 
+        .game-content-wrapper { 
+            padding: 0 15px; 
+        } 
+        .game-info-card, .recharge-form { 
+            padding: 20px; 
+            margin-bottom: 25px; 
+        } 
+        .game-info-card h2, .recharge-form h2 { 
+            font-size: 1.6em; 
+        } 
+        .package-grid { 
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+        } 
+        .package-item { 
+            padding: 12px; 
+            min-height: 80px; 
+        } 
+        .package-item span:first-child { 
+            font-size: 0.95em; 
+        } 
+        .package-item .price { 
+            font-size: 1.1em; 
+        } 
+        .footer-content { 
+            padding: 0 15px; 
+        } 
+        .footer-links { 
+            gap: 15px; 
+            max-width: 400px; 
+        } 
+        .whatsapp-link { 
+            padding: 8px 15px; 
+        } 
+    }
+    
+    @media (max-width: 480px) { 
+        .header-left .logo-img { 
+            max-height: 60px; 
+        } 
+        .game-main .game-hero { 
+            height: 150px; 
+            margin-bottom: 25px; 
+        } 
+        .game-main .game-hero h1 { 
+            font-size: 1.8em; 
+        } 
+        .game-info-card h2, .recharge-form h2 { 
+            font-size: 1.4em; 
+        } 
+        .form-group input[type="text"] { 
+            padding: 10px 15px; 
+        } 
+        .package-grid { 
+            grid-template-columns: 1fr 1fr; 
+        } 
+        #confirm-recharge-btn { 
+            padding: 12px; 
+            font-size: 1.1em; 
+        } 
+        .footer-links { 
+            flex-direction: column; 
+            gap: 8px; 
+            max-width: 250px; 
+        } 
+        .whatsapp-link { 
+            padding: 8px 15px; 
+        } 
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo-link"><img src="images/yordin_logo.png" alt="Yordin Logo" class="logo-img"></a>
+        </div>
+    </header>
+    <main class="game-main">
+        <div class="game-content-wrapper">
+            <div class="recharge-form">
+                <h2 style="color: blue;">1. Ingresa tu ID de Jugador</h2>
+                <div class="form-group">
+                    <label for="player-id">ID de Jugador:</label>
+                    <input type="text" style="background-color: white; color: black;" id="player-id" name="playerId" placeholder="Ej: 1234567890" required>
+                </div>
+                <h2 style="color: blue;">2. Selecciona tu Oro</h2>
+                <div class="package-grid" id="package-list"></div>
+                <form id="bloodstrike-recharge-form">
+                    <button type="submit" class="btn-primary" id="confirm-recharge-btn" disabled>Proceder al Pago</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p style="color:blue;">&copy; 2025 Yordin Recargas. Todos los derechos reservados.</p>
+            <a href="https://wa.me/584264282553" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+            </a>
+        </div>
+    </footer>
+    <script type="module">
+        import { bloodstrikePackages } from './precios.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const playerIdInput = document.getElementById('player-id');
+            const packageListDiv = document.getElementById('package-list');
+            const confirmBtn = document.getElementById('confirm-recharge-btn');
+            let selectedPackage = null;
+            
+            const currentCurrency = 'VES';
+
+            function formatPrice(price) {
+                return `Bs. ${parseFloat(price).toFixed(2)}`;
+            }
+
+            function updatePackages() {
+                packageListDiv.innerHTML = '';
+                bloodstrikePackages.forEach(pkg => {
+                    const packageItem = document.createElement('div');
+                    packageItem.classList.add('package-item');
+                    packageItem.dataset.id = pkg.id;
+                    packageItem.dataset.priceUsd = pkg.priceUSD;
+                    packageItem.dataset.priceVes = pkg.priceVES;
+                    packageItem.innerHTML = `
+                        <span>${pkg.name}</span>
+                        <span class="price">${formatPrice(pkg.priceVES)}</span>
+                    `;
+                    packageItem.addEventListener('click', () => {
+                        if (selectedPackage) {
+                            selectedPackage.classList.remove('selected');
+                        }
+                        packageItem.classList.add('selected');
+                        selectedPackage = packageItem;
+                        checkFormValidity();
+                    });
+                    packageListDiv.appendChild(packageItem);
+                });
+                checkFormValidity();
+            }
+
+            function checkFormValidity() {
+                const playerIdValid = playerIdInput.value.trim() !== '';
+                confirmBtn.disabled = !(playerIdValid && selectedPackage);
+            }
+
+            playerIdInput.addEventListener('input', checkFormValidity);
+
+            updatePackages();
+
+            document.getElementById('bloodstrike-recharge-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (selectedPackage) {
+                    const playerId = playerIdInput.value.trim();
+                    const packageName = selectedPackage.querySelector('span:first-child').textContent;
+                    
+                    const basePriceUSD = parseFloat(selectedPackage.dataset.priceUsd);
+                    const finalPriceVES = parseFloat(selectedPackage.dataset.priceVes);
+
+                    const transactionDetails = {
+                        game: "Blood Strike",
+                        playerId: playerId,
+                        package: packageName,
+                        priceUSD: basePriceUSD.toFixed(2),
+                        finalPrice: finalPriceVES.toFixed(2),
+                        currency: currentCurrency
+                    };
+                    
+                    localStorage.setItem('transactionDetails', JSON.stringify(transactionDetails));
+                    window.location.href = 'payment.html';
+                } else {
+                    console.error('Por favor, selecciona un plan de recarga.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
