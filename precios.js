@@ -34,6 +34,7 @@ const freefirePackagesUSD = [
     { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.44 },
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.54 }
     { id: 9, name: 'Tarjeta basica', priceUSD: 0.30 }
+
 ];
 
 // Precios base en USD para Arena Breakout - NO CAMBIAR ESTOS VALORES
