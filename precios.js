@@ -33,7 +33,8 @@ const freefirePackagesUSD = [
     { id: 6, name: '5600+560 Diamantes', priceUSD: 39.68 },
     { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.44 },
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.54 },
-{ id: 8, name: 'Tarjeta Básica', priceUSD: 0.78 }
+    { id: 9, name: 'Tarjeta Básica', priceUSD: 0.78 },
+    { id: 10, name: 'Pase de Nivel', priceUSD: 5.72 }
 ];
 
 // Precios base en USD para Arena Breakout - NO CAMBIAR ESTOS VALORES
