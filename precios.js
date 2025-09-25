@@ -1,7 +1,7 @@
 // =========================================================
 //  ACTUALIZA ESTOS VALORES DIARIAMENTE
 // =========================================================
-export const TASA_DOLAR_VES = 264.20; // Tasa de cambio de USD a Bolívares
+export const TASA_DOLAR_VES = 262.20; // Tasa de cambio de USD a Bolívares
 // =========================================================
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
@@ -25,7 +25,7 @@ const pubgmobilePackagesUSD = [
 
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
-    { id: 1, name: '100+10 Diamantes', priceUSD: 0.81 },
+    { id: 1, name: '100+10 Diamantes', priceUSD: 0.82 },
     { id: 2, name: '310+31 Diamantes', priceUSD: 2.40 },
     { id: 3, name: '520+52 Diamantes', priceUSD: 4.00 },
     { id: 4, name: '1050+105 Diamantes', priceUSD: 8.20 },
