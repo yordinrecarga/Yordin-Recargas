@@ -6,11 +6,11 @@ export const TASA_DOLAR_VES = 279.21; // Tasa de cambio de USD a Bolívares
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
 const robloxPackagesUSD = [
-    { id: 1, name: '80 Robux', priceUSD: 1.53 },
-    { id: 1, name: '400 Robux', priceUSD: 6.10 },
-    { id: 2, name: '800 Robux', priceUSD: 9.50 },
-    { id: 3, name: '1,700 Robux', priceUSD: 17.36 },
-    { id: 4, name: '4,500 Robux', priceUSD: 41.63 }
+    { id: 1, name: '80 Robux', priceUSD: 1.56 },
+    { id: 1, name: '400 Robux', priceUSD: 6.18 },
+    { id: 2, name: '800 Robux', priceUSD: 9.59 },
+    { id: 3, name: '1,700 Robux', priceUSD: 17.41 },
+    { id: 4, name: '4,500 Robux', priceUSD: 41.70 }
 ];
 
 // Precios base en USD para PUBG Mobile - NO CAMBIAR ESTOS VALORES
@@ -25,16 +25,16 @@ const pubgmobilePackagesUSD = [
 
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
-    { id: 1, name: '100+10 Diamantes', priceUSD: 0.78 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 2.40 },
-    { id: 3, name: '520+52 Diamantes', priceUSD: 3.95 },
-    { id: 4, name: '1050+105 Diamantes', priceUSD: 7.90 },
-    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.39 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.71 },
-    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.40 },
-    { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.49 },
+    { id: 1, name: '100+10 Diamantes', priceUSD: 0.79 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 2.42 },
+    { id: 3, name: '520+52 Diamantes', priceUSD: 3.98 },
+    { id: 4, name: '1050+105 Diamantes', priceUSD: 7.95 },
+    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.40 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.73 },
+    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.41 },
+    { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.50 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 0.79},
-    { id: 10, name: 'Pase de Nivel', priceUSD: 5.75 }
+    { id: 10, name: 'Pase de Nivel', priceUSD: 5.76 }
 ];
 
 // Precios base en USD para Arena Breakout - NO CAMBIAR ESTOS VALORES
@@ -54,14 +54,14 @@ const arenabreakoutPackagesUSD = [
 
 // Precios base en USD para Blood Strike - NO CAMBIAR ESTOS VALORES
 const bloodstrikePackagesUSD = [
-    { id: 1, name: '116 Gold', priceUSD: 1.09 },
-    { id: 2, name: '352 Gold', priceUSD: 3.34 },
-    { id: 3, name: '594 Gold', priceUSD: 5.97 },
-    { id: 4, name: '1210 Gold', priceUSD: 11.34 },
-    { id: 5, name: '2486 Gold', priceUSD: 22.70 },
-    { id: 6, name: '6380 Gold', priceUSD: 52.40 },
-    { id: 7, name: 'Pase Elite', priceUSD: 5.36 },
-    { id: 8, name: 'Pase Elite Plus', priceUSD: 10.68 }
+    { id: 1, name: '116 Gold', priceUSD: 1.15 },
+    { id: 2, name: '352 Gold', priceUSD: 3.41 },
+    { id: 3, name: '594 Gold', priceUSD: 5.99 },
+    { id: 4, name: '1210 Gold', priceUSD: 11.39 },
+    { id: 5, name: '2486 Gold', priceUSD: 22.78 },
+    { id: 6, name: '6380 Gold', priceUSD: 52.49 },
+    { id: 7, name: 'Pase Elite', priceUSD: 5.39 },
+    { id: 8, name: 'Pase Elite Plus', priceUSD: 10.71 }
 ];
 
 // Precios base en USD para Mobile Legends - NO CAMBIAR ESTOS VALORES
