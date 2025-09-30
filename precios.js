@@ -37,7 +37,7 @@ const freefirePackagesUSD = [
     { id: 10, name: 'Pase de Nivel', priceUSD: 5.76 }
 ];
 { id: 11, name: 'Pase Booyah', priceUSD: 3.00 }
-];
+]
 
 // Precios base en USD para Arena Breakout - NO CAMBIAR ESTOS VALORES
 const arenabreakoutPackagesUSD = [
