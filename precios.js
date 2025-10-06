@@ -6,11 +6,11 @@ export const TASA_DOLAR_VES = 280.21; // Tasa de cambio de USD a Bolívares
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
 const robloxPackagesUSD = [
-    { id: 1, name: '80 Robux', priceUSD: 1.59 },
-    { id: 1, name: '400 Robux', priceUSD: 6.21 },
-    { id: 2, name: '800 Robux', priceUSD: 10.04 },
-    { id: 3, name: '1,700 Robux', priceUSD: 17.53 },
-    { id: 4, name: '4,500 Robux', priceUSD: 41.75 }
+    { id: 1, name: '80 Robux', priceUSD: 1.70 },
+    { id: 1, name: '400 Robux', priceUSD: 6.30 },
+    { id: 2, name: '800 Robux', priceUSD: 10.15 },
+    { id: 3, name: '1,700 Robux', priceUSD: 17.55 },
+    { id: 4, name: '4,500 Robux', priceUSD: 41.80 }
 ];
 
 // Precios base en USD para PUBG Mobile - NO CAMBIAR ESTOS VALORES
@@ -25,16 +25,16 @@ const pubgmobilePackagesUSD = [
 
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
-    { id: 1, name: '100+10 Diamantes', priceUSD: 0.82 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 2.49 },
-    { id: 3, name: '520+52 Diamantes', priceUSD: 4.14 },
-    { id: 4, name: '1050+105 Diamantes', priceUSD: 8.20 },
-    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.48 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.75 },
-    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.45 },
-    { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.52 },
+    { id: 1, name: '100+10 Diamantes', priceUSD: 0.90 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 2.80 },
+    { id: 3, name: '520+52 Diamantes', priceUSD: 4.23 },
+    { id: 4, name: '1050+105 Diamantes', priceUSD: 8.25 },
+    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.55 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.80 },
+    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.54 },
+    { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.64 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 0.79},
-    { id: 10, name: 'Pase de Nivel', priceUSD: 5.76 },
+    { id: 10, name: 'Pase de Nivel', priceUSD: 5.78 },
 { id: 11, name: 'Pase Booyah', priceUSD: 2.00}
 ];
 
