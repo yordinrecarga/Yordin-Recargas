@@ -6,11 +6,11 @@ export const TASA_DOLAR_VES = 280.00; // Tasa de cambio de USD a Bolívares
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
 const robloxPackagesUSD = [
-    { id: 1, name: '80 Robux', priceUSD: 1.70 },
-    { id: 1, name: '400 Robux', priceUSD: 6.30 },
-    { id: 2, name: '800 Robux', priceUSD: 10.15 },
-    { id: 3, name: '1,700 Robux', priceUSD: 17.55 },
-    { id: 4, name: '4,500 Robux', priceUSD: 41.80 }
+    { id: 1, name: '80 Robux', priceUSD: 1.73 },
+    { id: 1, name: '400 Robux', priceUSD: 6.32 },
+    { id: 2, name: '800 Robux', priceUSD: 10.17 },
+    { id: 3, name: '1,700 Robux', priceUSD: 17.56 },
+    { id: 4, name: '4,500 Robux', priceUSD: 41.84 }
 ];
 
 // Precios base en USD para PUBG Mobile - NO CAMBIAR ESTOS VALORES
@@ -26,11 +26,11 @@ const pubgmobilePackagesUSD = [
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
     { id: 1, name: '100+10 Diamantes', priceUSD: 0.83 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 2.63 },
-    { id: 3, name: '520+52 Diamantes', priceUSD: 4.15 },
-    { id: 4, name: '1050+105 Diamantes', priceUSD: 8.27 },
-    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.80 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.80 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 2.65 },
+    { id: 3, name: '520+52 Diamantes', priceUSD: 4.26 },
+    { id: 4, name: '1050+105 Diamantes', priceUSD: 8.32 },
+    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.90 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.84 },
     { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.03 },
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 8.24 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 0.79},
@@ -55,14 +55,14 @@ const arenabreakoutPackagesUSD = [
 
 // Precios base en USD para Blood Strike - NO CAMBIAR ESTOS VALORES
 const bloodstrikePackagesUSD = [
-    { id: 1, name: '116 Gold', priceUSD: 1.15 },
-    { id: 2, name: '352 Gold', priceUSD: 3.41 },
+    { id: 1, name: '116 Gold', priceUSD: 1.18 },
+    { id: 2, name: '352 Gold', priceUSD: 3.43 },
     { id: 3, name: '594 Gold', priceUSD: 5.99 },
-    { id: 4, name: '1210 Gold', priceUSD: 11.39 },
-    { id: 5, name: '2486 Gold', priceUSD: 22.78 },
-    { id: 6, name: '6380 Gold', priceUSD: 52.49 },
-    { id: 7, name: 'Pase Elite', priceUSD: 5.39 },
-    { id: 8, name: 'Pase Elite Plus', priceUSD: 10.71 }
+    { id: 4, name: '1210 Gold', priceUSD: 11.43 },
+    { id: 5, name: '2486 Gold', priceUSD: 22.83 },
+    { id: 6, name: '6380 Gold', priceUSD: 52.53 },
+    { id: 7, name: 'Pase Elite', priceUSD: 5.43 },
+    { id: 8, name: 'Pase Elite Plus', priceUSD: 10.80 }
 ];
 
 // Precios base en USD para Mobile Legends - NO CAMBIAR ESTOS VALORES
