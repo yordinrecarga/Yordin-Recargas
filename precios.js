@@ -16,7 +16,7 @@ const robloxPackagesUSD = [
 // Precios base en USD para PUBG Mobile - NO CAMBIAR ESTOS VALORES
 const pubgmobilePackagesUSD = [
     { id: 1, name: '60 UC', priceUSD: 0.99 },
-    { id: 2, name: '300 + 25 UC', priceUSD: 5.04 },
+    { id: 2, name: '300 + 25 UC', priceUSD: 5.05 },
     { id: 3, name: '600 + 60 UC', priceUSD: 9.85 },
     { id: 4, name: '1500 + 300 UC', priceUSD: 24.52 },
     { id: 5, name: '3000 + 850 UC', priceUSD: 49.28 },
@@ -26,13 +26,13 @@ const pubgmobilePackagesUSD = [
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
     { id: 1, name: '100+10 Diamantes', priceUSD: 0.84 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 2.80 },
-    { id: 3, name: '520+52 Diamantes', priceUSD: 4.33 },
-    { id: 4, name: '1050+105 Diamantes', priceUSD: 8.38 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 2.85 },
+    { id: 3, name: '520+52 Diamantes', priceUSD: 4.35 },
+    { id: 4, name: '1050+105 Diamantes', priceUSD: 8.39 },
     { id: 5, name: '2180+218 Diamantes', priceUSD: 15.98 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.84 },
-    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.03 },
-    { id: 8, name: 'Tarjeta Mensual', priceUSD: 8.24 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 39.90 },
+    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.06 },
+    { id: 8, name: 'Tarjeta Mensual', priceUSD: 8.26 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 0.78},
     { id: 10, name: 'Pase de Nivel', priceUSD: 5.78 },
 { id: 11, name: 'Pase Booyah', priceUSD: 2.00}
