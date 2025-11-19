@@ -9,7 +9,7 @@ const robloxPackagesUSD = [
     { id: 1, name: '80 Robux', priceUSD: 1.70 },
     { id: 1, name: '400 Robux', priceUSD: 7.40 },
     { id: 2, name: '800 Robux', priceUSD: 13.45 },
-    { id: 3, name: '1,700 Robux', priceUSD: 22.56 },
+    { id: 3, name: '1,700 Robux', priceUSD: 23.56 },
     { id: 4, name: '4,500 Robux', priceUSD: 41.84 }
 ];
 
