@@ -34,7 +34,7 @@ const freefirePackagesUSD = [
     { id: 7, name: 'Tarjeta Semanal', priceUSD: 3.15 },
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 12.55 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 0.85},
-    { id: 10, name: 'Pase de Nivel', priceUSD: 5.99 },
+    { id: 10, name: 'Pase de Nivel', priceUSD: 7.99 },
 { id: 11, name: 'Pase Booyah', priceUSD: 2.25}
 ];
 
