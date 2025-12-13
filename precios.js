@@ -55,7 +55,7 @@ const arenabreakoutPackagesUSD = [
 
 // Precios base en USD para Blood Strike - NO CAMBIAR ESTOS VALORES
 const bloodstrikePackagesUSD = [
-    { id: 1, name: '105 Gold', priceUSD: 1.18 },
+    { id: 1, name: '105 Gold', priceUSD: 1.80 },
     { id: 2, name: '320 Gold', priceUSD: 3.43 },
     { id: 3, name: '540 Gold', priceUSD: 5.99 },
     { id: 4, name: '1100 Gold', priceUSD: 11.43 },
