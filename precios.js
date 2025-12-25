@@ -25,8 +25,8 @@ const pubgmobilePackagesUSD = [
 
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
-    { id: 1, name: '100+10 Diamantes', priceUSD: 1.70 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 5.80 },
+    { id: 1, name: '100+10 Diamantes', priceUSD: 1.90 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 5.85 },
     { id: 3, name: '520+52 Diamantes', priceUSD: 7.04 },
     { id: 4, name: '1050+105 Diamantes', priceUSD: 13.82 },
     { id: 5, name: '2180+218 Diamantes', priceUSD: 27.65 },
