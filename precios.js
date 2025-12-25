@@ -31,10 +31,10 @@ const freefirePackagesUSD = [
     { id: 4, name: '1050+105 Diamantes', priceUSD: 15.40 },
     { id: 5, name: '2180+218 Diamantes', priceUSD: 30.70 },
     { id: 6, name: '5600+560 Diamantes', priceUSD: 75.80 },
-    { id: 7, name: 'Tarjeta Semanal', priceUSD: 3.20 },
-    { id: 8, name: 'Tarjeta Mensual', priceUSD: 12.55 },
-    { id: 9, name: 'Tarjeta Básica', priceUSD: 0.97},
-    { id: 10, name: 'Pase de Nivel', priceUSD: 10.99 },
+    { id: 7, name: 'Tarjeta Semanal', priceUSD: 3.21 },
+    { id: 8, name: 'Tarjeta Mensual', priceUSD: 13.58 },
+    { id: 9, name: 'Tarjeta Básica', priceUSD: 1.25},
+    { id: 10, name: 'Pase de Nivel', priceUSD: 11.10 },
 { id: 11, name: 'Pase Booyah', priceUSD: 4.80}
 ];
 
