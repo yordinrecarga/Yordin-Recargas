@@ -30,7 +30,7 @@ const freefirePackagesUSD = [
     { id: 3, name: '520+52 Diamantes', priceUSD: 9.90 },
     { id: 4, name: '1050+105 Diamantes', priceUSD: 16.60 },
     { id: 5, name: '2180+218 Diamantes', priceUSD: 34.96 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 85.50 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 89.50 },
     { id: 7, name: 'Tarjeta Semanal', priceUSD: 4.60 },
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 14.50 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 1.70},
