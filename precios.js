@@ -1,7 +1,7 @@
 // =========================================================
 //  ACTUALIZA ESTOS VALORES DIARIAMENTE
 // =========================================================
-export const TASA_DOLAR_VES = 620.00; // Tasa de cambio de USD a Bolívares
+export const TASA_DOLAR_VES = 778.00; // Tasa de cambio de USD a Bolívares
 // =========================================================
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
@@ -25,12 +25,12 @@ const pubgmobilePackagesUSD = [
 
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
-    { id: 1, name: '100+10 Diamantes', priceUSD: 1.05 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 7.08 },
-    { id: 3, name: '520+52 Diamantes', priceUSD: 12.36 },
-    { id: 4, name: '1050+105 Diamantes', priceUSD: 24.30 },
-    { id: 5, name: '2180+218 Diamantes', priceUSD: 48.50 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 100.10 },
+    { id: 1, name: '100+10 Diamantes', priceUSD: 0.88 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 2.92 },
+    { id: 3, name: '520+52 Diamantes', priceUSD: 4.10 },
+    { id: 4, name: '1050+105 Diamantes', priceUSD: 7.62 },
+    { id: 5, name: '2180+218 Diamantes', priceUSD: 15.13 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 37.68 },
     { id: 7, name: 'Tarjeta Semanal', priceUSD: 4.80 },
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 14.60 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 1.78},
