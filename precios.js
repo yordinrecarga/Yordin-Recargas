@@ -6,11 +6,11 @@ export const TASA_DOLAR_VES = 825.00; // Tasa de cambio de USD a Bolívares
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
 const robloxPackagesUSD = [
-    { id: 1, name: '80 Robux', priceUSD: 1.16 },
+    { id: 1, name: '80 Robux', priceUSD: 1.05 },
     { id: 1, name: '500 Robux', priceUSD: 5.05 },
-    { id: 2, name: '1,000 Robux', priceUSD: 11.55 },
-    { id: 3, name: '2,000 Robux', priceUSD: 23.10 },
-    { id: 4, name: '5,250 Robux', priceUSD: 47.20 }
+    { id: 2, name: '1,000 Robux', priceUSD: 10.55 },
+    { id: 3, name: '2,000 Robux', priceUSD: 19.10 },
+    { id: 4, name: '5,250 Robux', priceUSD: 40.20 }
 ];
 
 // Precios base en USD para PUBG Mobile - NO CAMBIAR ESTOS VALORES
