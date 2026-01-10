@@ -1,7 +1,7 @@
 // =========================================================
 //  ACTUALIZA ESTOS VALORES DIARIAMENTE
 // =========================================================
-export const TASA_DOLAR_VES = 750.00; // Tasa de cambio de USD a Bolívares
+export const TASA_DOLAR_VES = 820.00; // Tasa de cambio de USD a Bolívares
 // =========================================================
 
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
