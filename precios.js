@@ -25,17 +25,17 @@ const pubgmobilePackagesUSD = [
 
 // Precios base en USD para Free Fire - NO CAMBIAR ESTOS VALORES
 const freefirePackagesUSD = [
-    { id: 1, name: '100+10 Diamantes', priceUSD: 0.88 },
-    { id: 2, name: '310+31 Diamantes', priceUSD: 2.90 },
-    { id: 3, name: '520+52 Diamantes', priceUSD: 4.10 },
-    { id: 4, name: '1050+105 Diamantes', priceUSD: 7.91 },
-    { id: 5, name: '2180+218 Diamantes', priceUSD: 14.95 },
-    { id: 6, name: '5600+560 Diamantes', priceUSD: 37.70 },
-    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.20 },
-    { id: 8, name: 'Tarjeta Mensual', priceUSD: 9.00 },
-    { id: 9, name: 'Tarjeta Básica', priceUSD: 0.75},
-    { id: 10, name: 'Pase de Nivel', priceUSD: 3.90 },
-{ id: 11, name: 'Pase Booyah', priceUSD: 2.10}
+    { id: 1, name: '100+10 Diamantes', priceUSD: 0.87 },
+    { id: 2, name: '310+31 Diamantes', priceUSD: 2.85 },
+    { id: 3, name: '520+52 Diamantes', priceUSD: 4.06 },
+    { id: 4, name: '1050+105 Diamantes', priceUSD: 7.87 },
+    { id: 5, name: '2180+218 Diamantes', priceUSD: 14.92 },
+    { id: 6, name: '5600+560 Diamantes', priceUSD: 37.67 },
+    { id: 7, name: 'Tarjeta Semanal', priceUSD: 2.15 },
+    { id: 8, name: 'Tarjeta Mensual', priceUSD: 8.95 },
+    { id: 9, name: 'Tarjeta Básica', priceUSD: 0.70},
+    { id: 10, name: 'Pase de Nivel', priceUSD: 3.70 },
+{ id: 11, name: 'Pase Booyah', priceUSD: 2.00}
 ];
 
 // Precios base en USD para Arena Breakout - NO CAMBIAR ESTOS VALORES
