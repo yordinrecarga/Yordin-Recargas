@@ -35,7 +35,7 @@ const freefirePackagesUSD = [
     { id: 8, name: 'Tarjeta Mensual', priceUSD: 8.95 },
     { id: 9, name: 'Tarjeta Básica', priceUSD: 0.70},
     { id: 10, name: 'Pase de Nivel', priceUSD: 3.70 },
-{ id: 11, name: 'Pase Booyah', priceUSD: 1.48}
+{ id: 11, name: 'Pase Booyah', priceUSD: 1.50}
 ];
 
 // Precios base en USD para Arena Breakout - NO CAMBIAR ESTOS VALORES
