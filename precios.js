@@ -10,7 +10,7 @@ const robloxPackagesUSD = [
     { id: 1, name: '500 Robux', priceUSD: 6.27 },
     { id: 2, name: '1,000 Robux', priceUSD: 12.17 },
     { id: 3, name: '2,000 Robux', priceUSD: 23.72 },
-    { id: 4, name: '5,250 Robux', priceUSD: 49.20 }
+    { id: 4, name: '5,250 Robux', priceUSD: 49.50 }
 ];
 
 // Precios base en USD para PUBG Mobile - NO CAMBIAR ESTOS VALORES
