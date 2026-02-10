@@ -61,7 +61,7 @@ const bloodstrikePackagesUSD = [
     { id: 4, name: '1100 Gold', priceUSD: 8.05 },
     { id: 5, name: '2260 Gold', priceUSD: 15.70 },
     { id: 6, name: '5800 Gold', priceUSD: 37.52 },
-    { id: 7, name: 'Pase Elite', priceUSD: 3.95 },
+    { id: 7, name: 'Pase Elite', priceUSD: 3.84 },
     { id: 8, name: 'Pase Elite Plus', priceUSD: 6.83 }
 ];
 
