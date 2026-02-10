@@ -55,11 +55,11 @@ const arenabreakoutPackagesUSD = [
 
 // Precios base en USD para Blood Strike - NO CAMBIAR ESTOS VALORES
 const bloodstrikePackagesUSD = [
-    { id: 1, name: '105 Gold', priceUSD: 0.75 },
-    { id: 2, name: '320 Gold', priceUSD: 2.19 },
-    { id: 3, name: '540 Gold', priceUSD: 3.58 },
-    { id: 4, name: '1100 Gold', priceUSD: 6.94 },
-    { id: 5, name: '2260 Gold', priceUSD: 13.84 },
+    { id: 1, name: '105 Gold', priceUSD: 0.79 },
+    { id: 2, name: '320 Gold', priceUSD: 3.10 },
+    { id: 3, name: '540 Gold', priceUSD: 5.10 },
+    { id: 4, name: '1100 Gold', priceUSD: 7.80 },
+    { id: 5, name: '2260 Gold', priceUSD: 14.95 },
     { id: 6, name: '5800 Gold', priceUSD: 34.96 },
     { id: 7, name: 'Pase Elite', priceUSD: 3.03 },
     { id: 8, name: 'Pase Elite Plus', priceUSD: 6.83 }
