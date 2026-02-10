@@ -7,7 +7,7 @@ export const TASA_DOLAR_VES = 592.00; // Tasa de cambio de USD a Bolívares
 // Precios base en USD para Roblox - NO CAMBIAR ESTOS VALORES
 const robloxPackagesUSD = [
     { id: 1, name: '80 Robux', priceUSD: 0.71 },
-    { id: 1, name: '500 Robux', priceUSD: 6.30 },
+    { id: 1, name: '500 Robux', priceUSD: 6.27 },
     { id: 2, name: '1,000 Robux', priceUSD: 9.95 },
     { id: 3, name: '2,000 Robux', priceUSD: 19.10 },
     { id: 4, name: '5,250 Robux', priceUSD: 44.20 }
