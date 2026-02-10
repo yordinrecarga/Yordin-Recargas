@@ -63,6 +63,8 @@ const bloodstrikePackagesUSD = [
     { id: 6, name: '5800 Gold', priceUSD: 37.52 },
     { id: 7, name: 'Pase Elite', priceUSD: 3.38 },
     { id: 8, name: 'Pase Elite Plus', priceUSD: 7.95 }
+    { id: 9, name: 'ultra skin ', priceUSD: 0.70 }
+
 ];
 
 // Precios base en USD para Mobile Legends - NO CAMBIAR ESTOS VALORES
