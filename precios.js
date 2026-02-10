@@ -50,6 +50,7 @@ const arenabreakoutPackagesUSD = [
     { id: 9, name: 'Paquete Principiante', priceUSD: 1.01 },
     { id: 10, name: 'Maletín Antibalas', priceUSD: 2.97 },
     { id: 11, name: 'Pase Avanzado', priceUSD: 5.00 },
+    { id: 12, name: 'Pase Ultra Skin', priceUSD: 0.70 }
     { id: 12, name: 'Pase Premium', priceUSD: 14.85 }
 ];
 
